@@ -10,5 +10,6 @@ type User {
 type Mutation {
     createUser(email: String!, username: String!): User!
     verifyEmail(token: String!): String
+    resendVerificationEmail(email: String!): String
   }
 `;
