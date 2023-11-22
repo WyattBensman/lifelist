@@ -8,7 +8,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="py-1 px-4 sm:px-8 md:px-16 lg:px-20 xl:px-24 border">
+    <nav className="py-1 px-4 sm:px-8 md:px-16 lg:px-20 xl:px-24">
       <div className="flex flex-wrap items-center justify-between">
         {/* Brand Logo */}
         <img className="w-36" src="/images/branding/official-logo.png" />
