@@ -1,7 +1,7 @@
 export default function Header() {
   return (
     <div className="flex flex-wrap h-5/6 px-4 sm:px-8 md:px-16 lg:px-20 xl:px-24">
-      <div className="w-full md:w-1/2 mt-10 md:mt-20 md:ps-10">
+      <div className="w-full md:w-1/2 mt-10 md:mt-36 md:ps-14">
         <h1 className="md:text-5xl text-3xl text-center md:text-left font-bold">
           A social media platform to capture & revisit countless memories
         </h1>

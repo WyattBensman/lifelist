@@ -1,5 +1,7 @@
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
+import Overview from "./components/Overview";
+import LifeList from "./components/LifeList";
 
 function App() {
   return (
@@ -8,9 +10,8 @@ function App() {
         <Navbar />
         <Header />
       </div>
-      <div className="px-4 sm:px-8 md:px-16 lg:px-20 xl:px-24">
-        <h1>Hey</h1>
-      </div>
+      <Overview />
+      <LifeList />
     </>
   );
 }
