@@ -9,7 +9,7 @@ function App() {
         <Header />
       </div>
       <div className="px-4 sm:px-8 md:px-16 lg:px-20 xl:px-24">
-        <h1>Hiiiii</h1>
+        <h1>Hey</h1>
       </div>
     </>
   );
