@@ -2,7 +2,6 @@ const express = require("express");
 const { ApolloServer } = require("@apollo/server");
 const { expressMiddleware } = require("@apollo/server/express4");
 const path = require("path");
-const { authMiddleware } = require("./utils/auth");
 
 const { typeDefs, resolvers } = require("./schemas");
 const db = require("./config/connection");
@@ -12,6 +11,12 @@ const app = express();
 const server = new ApolloServer({
   typeDefs,
   resolvers,
+  context: ({ req }) => {
+    // Extract OAuth2.0 credentials from the request (you may need to modify this based on your authentication approach)
+    const credentials = req.headers.authorization || ""; // Replace this with your actual credentials retrieval logic
+
+    return { credentials };
+  },
 });
 
 // Create a new instance of an Apollo server with the GraphQL schema
@@ -21,12 +26,7 @@ const startApolloServer = async () => {
   app.use(express.urlencoded({ extended: false }));
   app.use(express.json());
 
-  app.use(
-    "/graphql",
-    expressMiddleware(server, {
-      context: authMiddleware,
-    })
-  );
+  app.use("/graphql", expressMiddleware(server));
 
   if (process.env.NODE_ENV === "production") {
     app.use(express.static(path.join(__dirname, "../client/dist")));

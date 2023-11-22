@@ -2,13 +2,24 @@ const { User } = require("../models");
 const { generateUniqueToken, sendConfirmationEmail } = require("../utils");
 
 const resolvers = {
+  Query: {
+    users: async () => {
+      return await User.find();
+    },
+  },
   Mutation: {
     createUser: async (_, { email, username }) => {
       const confirmationToken = generateUniqueToken();
 
       const user = await User.create({ email, username, confirmationToken });
+      console.log("User Created");
 
-      sendConfirmationEmail(email, confirmationToken);
+      try {
+        sendConfirmationEmail(email, confirmationToken);
+        console.log(`Email sent to ${email}`);
+      } catch (error) {
+        console.error("Error sending confirmation email:", error);
+      }
 
       return user;
     },
