@@ -18,8 +18,11 @@ export default function Header() {
           </a>
         </div>
       </div>
-      <div className="w-full md:w-1/2 md:mt-3 flex justify-center items-center">
-        <img className="h-5/6" src="/images/mockups/header-graphic.png" />
+      <div className="w-full md:w-1/2 mt-10 md:mt-3 flex justify-center items-center">
+        <img
+          className="w-full md:11/12 lg:w-5/6"
+          src="/images/mockups/header-graphic.png"
+        />
       </div>
     </div>
   );
