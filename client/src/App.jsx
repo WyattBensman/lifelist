@@ -1,13 +1,15 @@
-import Header from "./components/Header";
 import Navbar from "./components/Navbar";
+import Header from "./components/Header";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <div className="px-4 sm:px-8 md:px-16 lg:px-20 xl:px-24">
+      <div className="h-screen">
+        <Navbar />
         <Header />
-        <h1>Hey</h1>
+      </div>
+      <div className="px-4 sm:px-8 md:px-16 lg:px-20 xl:px-24">
+        <h1>Hiiiii</h1>
       </div>
     </>
   );
