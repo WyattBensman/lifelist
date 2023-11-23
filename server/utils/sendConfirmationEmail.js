@@ -2,18 +2,6 @@ const nodemailer = require("nodemailer");
 const { google } = require("googleapis");
 
 // Your OAuth2.0 credentials
-const credentials = {
-  web: {
-    client_id:
-      "743490527131-dc2cq2g37rfbra6tdob57ior8uoil528.apps.googleusercontent.com",
-    project_id: "early-access-405817",
-    auth_uri: "https://accounts.google.com/o/oauth2/auth",
-    token_uri: "https://oauth2.googleapis.com/token",
-    auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs",
-    client_secret: "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",
-    redirect_uris: "https://joinlifelist.com",
-  },
-};
 
 // Function to send the confirmation email
 const sendConfirmationEmail = async (email, confirmationToken) => {
