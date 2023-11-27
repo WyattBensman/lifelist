@@ -11,12 +11,6 @@ const app = express();
 const server = new ApolloServer({
   typeDefs,
   resolvers,
-  context: ({ req }) => {
-    // Extract OAuth2.0 credentials from the request (you may need to modify this based on your authentication approach)
-    const credentials = req.headers.authorization || ""; // Replace this with your actual credentials retrieval logic
-
-    return { credentials };
-  },
 });
 
 // Create a new instance of an Apollo server with the GraphQL schema

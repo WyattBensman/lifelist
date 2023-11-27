@@ -1,14 +1,35 @@
 import { useState } from "react";
+import { useMutation } from "@apollo/client";
+import { CREATE_USER } from "../utils/mutations";
 
 export default function EarlyAccessForm() {
   const [viewRequirements, setViewRequirements] = useState(false);
+
+  const [createUserMutation] = useMutation(CREATE_USER);
 
   const handleViewRequirements = () => {
     setViewRequirements(!viewRequirements);
   };
 
+  const handleSignUp = async (event) => {
+    event.preventDefault();
+
+    const email = event.target.email.value;
+    const username = event.target.username.value;
+
+    try {
+      const response = await createUserMutation({
+        variables: { email, username },
+      });
+
+      console.log(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
-    <form className="w-full mt-4">
+    <form className="w-full mt-4" onSubmit={handleSignUp}>
       <label htmlFor="email" className="block text-lg">
         Email
       </label>

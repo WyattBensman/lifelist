@@ -5,6 +5,7 @@ import Home from "./pages/Home.jsx";
 import EarlyAccess from "./pages/EarlyAccess.jsx";
 import App from "./App.jsx";
 import Error from "./pages/Error.jsx";
+import VerifyEmail from "./pages/VerifyEmail.jsx";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
         element: <EarlyAccess />,
       },
     ],
+  },
+  {
+    path: "/verify-email/:token",
+    element: <VerifyEmail />,
   },
 ]);
 
