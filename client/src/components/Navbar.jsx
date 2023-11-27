@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 
 export default function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -11,7 +12,9 @@ export default function Navbar() {
     <nav className="py-1 px-4 sm:px-8 md:px-16 lg:px-20 xl:px-24 drop-shadow-xl">
       <div className="flex flex-wrap items-center justify-between">
         {/* Brand Logo */}
-        <img className="w-36" src="/images/branding/official-logo.png" />
+        <Link to="/">
+          <img className="w-36" src="/images/branding/official-logo.png" />
+        </Link>
         {/* Toggler */}
         <button
           type="button"
@@ -46,28 +49,28 @@ export default function Navbar() {
         >
           <ul className="font-medium text-center flex flex-col p-4 md:p-0 md:border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
             <li>
-              <a
-                href="#"
+              <NavLink
+                to="/"
                 className="hover:text-[#34CC98] ease-in-out duration-100"
               >
                 Home
-              </a>
+              </NavLink>
             </li>
-            <li className="md:mt-0 mt-3">
-              <a
-                href="#"
+            {/* <li className="md:mt-0 mt-3">
+              <NavLink
+                to="/"
                 className="hover:text-[#34CC98] ease-in-out duration-100"
               >
                 Features
-              </a>
-            </li>
+              </NavLink>
+            </li> */}
             <li className="md:mt-0 md:mb-0 mt-6 mb-3">
-              <a
-                href="#"
+              <NavLink
+                to="/earlyaccess"
                 className="border-2 rounded-3xl border-[#34CC98] px-8 py-3 bg-[#34CC98] text-white hover:text-[#34CC98] hover:bg-transparent ease-in-out duration-200"
               >
                 Early Access
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>

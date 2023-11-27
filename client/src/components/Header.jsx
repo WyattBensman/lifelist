@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Header() {
   return (
     <div className="flex flex-wrap h-5/6 px-4 sm:px-8 md:px-16 lg:px-20 xl:px-24">
@@ -10,12 +12,12 @@ export default function Header() {
           bring them joy!
         </h3>
         <div className="flex justify-center md:block">
-          <a
-            href="#"
+          <Link
+            to="earlyaccess"
             className="border-2 rounded-full font-medium border-[#34CC98] text-lg md:ms-16 px-6 py-4 md:px-10 md:py-5 bg-white text-[#34CC98] hover:text-white hover:bg-[#34CC98] ease-in-out duration-200"
           >
             EARLY ACCESS
-          </a>
+          </Link>
         </div>
       </div>
       <div className="w-full md:w-1/2 mt-10 md:mt-3 flex justify-center items-center">
