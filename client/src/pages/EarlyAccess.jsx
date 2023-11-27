@@ -1,6 +1,5 @@
 import EarlyAccessForm from "../components/EarlyAccessForm";
 import EarlyAccessHeader from "../components/EarlyAccessHeader";
-import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
 export default function EarlyAccess() {
@@ -23,7 +22,6 @@ export default function EarlyAccess() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }
