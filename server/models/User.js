@@ -14,6 +14,7 @@ const userSchema = new Schema({
     required: true,
     trim: true,
     maxlength: 30,
+    minlength: 7,
     match: /^[a-zA-Z0-9.]+$/,
   },
   // Fields for email confirmation
