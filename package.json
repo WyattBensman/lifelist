@@ -16,8 +16,5 @@
     "concurrently": "^8.2.2",
     "dotenv": "^16.3.1",
     "mongodb": "^6.3.0"
-  },
-  "devDependencies": {
-    "vite": "^5.0.3"
   }
 }
