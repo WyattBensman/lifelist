@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <div className="py-8">
+    <div className="py-8 block">
       <h6 className="text-xl font-medium text-center">Follow our socials!</h6>
       <div className="flex justify-center space-x-8 mt-2">
         <Link

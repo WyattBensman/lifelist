@@ -9,7 +9,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="py-1 px-4 sm:px-8 md:px-16 lg:px-20 xl:px-24 drop-shadow-xl">
+    <nav className="py-1 px-4 sm:px-8 md:px-16 lg:px-20 xl:px-24">
       <div className="flex flex-wrap items-center justify-between">
         {/* Brand Logo */}
         <Link to="/">

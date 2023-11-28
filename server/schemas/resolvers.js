@@ -56,7 +56,11 @@ const resolvers = {
 
         user.confirmationToken = newConfirmationToken;
         await user.save();
-        await sendConfirmationEmail(email, newConfirmationToken);
+        await sendConfirmationEmail(
+          email,
+          newConfirmationToken,
+          "Here is your new verification email message."
+        );
 
         return "New verification email sent. Please check your inbox.";
       } catch (error) {

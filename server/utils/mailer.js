@@ -1,7 +1,7 @@
 const nodemailer = require("nodemailer");
 
 // Function to send a confirmation email
-const sendConfirmationEmail = async (email, confirmationToken) => {
+const sendConfirmationEmail = async (email, confirmationToken, message) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
@@ -16,7 +16,7 @@ const sendConfirmationEmail = async (email, confirmationToken) => {
     from: "contact@joinlifelist.com",
     to: email,
     subject: "Early Access Confirmation",
-    html: `<p>Click the following link to confirm your early access information: <a href="${confirmationLink}">Confirm Early Access</a></p>`,
+    html: `<p>${message}</p><p>Click the following link to confirm your early access information: <a href="${confirmationLink}">Confirm Early Access</a></p>`,
   };
 
   return transporter.sendMail(mailOptions);
