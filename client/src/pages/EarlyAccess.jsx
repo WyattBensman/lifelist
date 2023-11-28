@@ -34,7 +34,7 @@ export default function EarlyAccess() {
         <Navbar />
         <EarlyAccessHeader />
         <div className="flex justify-center mt-10">
-          <div className="w-2/5">
+          <div className="w-11/12 md:w-2/5">
             {showForm ? (
               <>
                 <h2 className="text-4xl font-semibold">
