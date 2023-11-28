@@ -15,8 +15,5 @@
   "dependencies": {
     "concurrently": "^8.2.2",
     "mongodb": "^6.3.0"
-  },
-  "engines": {
-    "node": "14.x"
   }
 }
