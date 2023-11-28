@@ -4,11 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "npx vite",
+    "build": "npx vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "heroku-postbuild": "vite build"
+    "preview": "npx vite preview",
+    "heroku-postbuild": "npx vite build"
   },
   "dependencies": {
     "@apollo/client": "^3.8.7",
