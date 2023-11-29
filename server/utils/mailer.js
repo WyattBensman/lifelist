@@ -10,7 +10,7 @@ const sendConfirmationEmail = async (email, confirmationToken, message) => {
     },
   });
 
-  const confirmationLink = `http://yourfrontendapp.com/verify-email/${confirmationToken}`;
+  const confirmationLink = `https://joinlifelist-c2a400d99ff8.herokuapp.com/verify-email/${confirmationToken}`;
 
   const mailOptions = {
     from: "contact@joinlifelist.com",
