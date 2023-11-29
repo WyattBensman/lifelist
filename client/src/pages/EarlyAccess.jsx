@@ -66,6 +66,7 @@ export default function EarlyAccess() {
             )}
           </div>
         </div>
+        <Footer />
       </div>
     </>
   );

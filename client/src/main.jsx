@@ -21,11 +21,11 @@ const router = createBrowserRouter([
         path: "/earlyaccess",
         element: <EarlyAccess />,
       },
+      {
+        path: "/verify-email/:token",
+        element: <VerifyEmail />,
+      },
     ],
-  },
-  {
-    path: "/verify-email/:token",
-    element: <VerifyEmail />,
   },
 ]);
 
