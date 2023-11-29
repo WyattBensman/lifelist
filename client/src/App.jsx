@@ -7,8 +7,6 @@ import {
 import { setContext } from "@apollo/client/link/context";
 import { Outlet } from "react-router-dom";
 
-import Footer from "./components/Footer";
-
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
   uri: "/graphql",

@@ -4,6 +4,7 @@ import EarlyAccessHeader from "../components/EarlyAccessHeader";
 import Navbar from "../components/Navbar";
 import { useMutation } from "@apollo/client";
 import { RESEND_VERIFICATION_EMAIL } from "../utils/mutations";
+import Footer from "../components/Footer";
 
 export default function EarlyAccess() {
   const [showForm, setShowForm] = useState(true);

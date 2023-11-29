@@ -5,6 +5,7 @@ import Question from "../components/Question";
 import WorldMap from "../components/WorldMap";
 import Collage from "../components/Collage";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
