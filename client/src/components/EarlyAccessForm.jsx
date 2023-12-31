@@ -51,12 +51,17 @@ export default function EarlyAccessForm({ handleSetForm, setEmailForResend }) {
           onChange={handleInputChange}
         />
 
-        <label htmlFor="username" className="block text-lg mt-4">
-          Username
-        </label>
-        <p className="text-xs" onClick={handleViewRequirements}>
-          View Requirements
-        </p>
+        <div className="flex items-center mt-4">
+          <label htmlFor="username" className="block text-lg">
+            Username
+          </label>
+          <p
+            className="text-xs italic text-gray-700 ml-4 select-none hover:cursor-pointer"
+            onClick={handleViewRequirements}
+          >
+            View Requirements
+          </p>
+        </div>
         {viewRequirements ? (
           <p className="text-xs">
             Must contain only letters, numbers, dashes (-) and between 7-30
@@ -73,6 +78,10 @@ export default function EarlyAccessForm({ handleSetForm, setEmailForResend }) {
           value={formData.username}
           onChange={handleInputChange}
         />
+        <p className="text-xs italic text-gray-700 mt-1">
+          *Email confirmation required in order to successfully gain early
+          access & reserve your username*
+        </p>
         <button
           type="submit"
           className="border-2 rounded-3xl font-medium border-[#34CC98] px-4 py-2 bg-[#34CC98] text-white hover:text-[#34CC98] hover:bg-white ease-in-out duration-200 mt-4"

@@ -54,11 +54,15 @@ export default function EarlyAccess() {
               </>
             ) : (
               <div className="text-center">
-                <h6 className="font-medium mt-4">One last step!</h6>
-                <p>An email has been sent to confirm your account!</p>
+                <h6 className="font-medium mt-4">
+                  An email has been sent to confirm your account!
+                </h6>
+                <p className="mb-2 text-xs">
+                  Confirm to secure your username and recieve early access
+                </p>
                 <button
                   type="button"
-                  className="border-2 rounded-3xl font-medium border-[#34CC98] px-4 py-2 bg-[#34CC98] text-white hover:text-[#34CC98] hover:bg-white ease-in-out duration-200 mt-2"
+                  className="border-2 rounded-3xl font-medium border-[#34CC98] px-4 py-2 bg-[#34CC98] text-white hover:text-[#34CC98] hover:bg-white ease-in-out duration-200 m-2"
                   onClick={handleResendVerification}
                 >
                   RESEND VERIFICATION

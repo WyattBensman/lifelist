@@ -44,7 +44,7 @@ export default function Collage() {
           <i className="fa-solid fa-angle-down mr-2"></i>
         )}
 
-        <p>ADDITIONAL COMPONENTS</p>
+        <p className="hover:cursor-pointer">ADDITIONAL COMPONENTS</p>
         {showFeatures ? (
           <i className="fa-solid fa-angle-down fa-flip-vertical ml-2"></i>
         ) : (
